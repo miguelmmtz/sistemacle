@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'alumno'=> [
+            'driver' => 'session',
+            'provider' => 'alumno'
+        ],
+
+        'docente'=> [
+            'driver' => 'session',
+            'provider' => 'docente'
+        ],
     ],
 
     /*
@@ -69,6 +79,16 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'alumno' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Alumno::class
+        ],
+
+        'docente' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Docente::class
         ],
 
         // 'users' => [
