@@ -14,12 +14,12 @@ class AdministrativoController extends Controller
     {
         //Se excluye el id correspondiente al coordinador
         $administrativos = User::select('id','name','email')->whereNotIn('id', [1])->get();
-        return view('administrativos.index', ['administrativos'=>$administrativos]);
+        return view('coordinacion.administrativos.index', ['administrativos'=>$administrativos]);
     }
 
     public function create()
     {
-        return view('administrativos.create');
+        return view('coordinacion.administrativos.create');
     }
 
     public function store(Request $request)
@@ -47,7 +47,7 @@ class AdministrativoController extends Controller
 
     public function edit($id)
     {
-        return view('administrativos.edit', ['administrativo'=>User::findOrFail($id)]);
+        return view('coordinacion.administrativos.edit', ['administrativo'=>User::findOrFail($id)]);
     }
 
     public function update(Request $request, $id)

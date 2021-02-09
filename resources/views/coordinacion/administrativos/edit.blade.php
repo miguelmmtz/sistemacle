@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-7">
-                <h2>Editar Administrativo</h2>
+                <h2>Editar Administrativo {{$administrativo->name}}</h2>
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
